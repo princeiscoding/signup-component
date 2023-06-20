@@ -1,0 +1,129 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* custom properties */
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --Blue: hsl(248, 32%, 49%);
+  --DarkBlue: hsl(249, 10%, 26%);
+  --GrayishBlue: hsl(246, 25%, 77%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  color: white;
+  text-align: center;
+  background-color: var(--Red);
+  background-image: url("./images/bg-intro-mobile.png");
+  font-size: 16px;
+}
+h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.lead {
+  margin-bottom: 4rem;
+}
+
+.sale,
+.info-card {
+  border-radius: 10px;
+  box-shadow: 1px 5px 1px 1px rgba(0, 0, 0, 0.329);
+}
+.sale {
+  background: var(--Blue);
+  padding: 1.3rem 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.sale span {
+  font-weight: 600;
+}
+.info-card {
+  background: white;
+  padding: 1.3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.info-card input {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1.1rem;
+  border-radius: 5px;
+  border-color: hsla(249, 10%, 26%, 0.1);
+  border-style: solid;
+  color: hsla(249, 10%, 26%, 0.7);
+}
+.error {
+  color: var(--Red);
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 600;
+  margin-left: auto;
+  margin-top: -13px;
+}
+.error-icon {
+  background: url("./images/icon-error.svg") no-repeat 95%;
+}
+
+button {
+  background: var(--Green);
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  padding: 1.2rem;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0.5px 0.5px 0.5px 0.5px var(--GrayishBlue);
+  cursor: pointer;
+}
+button:hover {
+  background: hsl(154, 59%, 61%);
+}
+.terms {
+  color: var(--GrayishBlue);
+  font-size: 11px;
+  padding: 0 1.1rem;
+}
+.terms span {
+  color: hsla(0, 100%, 74%, 0.9);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    display: flex;
+    max-width: 100%;
+    padding: 5rem 7rem;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  article {
+    align-self: center;
+    flex: 1;
+    text-align: left;
+  }
+  .cards {
+    flex: 1;
+  }
+  .info-card {
+    gap: 1.1rem;
+    padding-bottom: 2rem;
+  }
+}
